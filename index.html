@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Afrotopia Café</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <span class="logo-text">Afrotopia Café</span>
+      <div class="logo-circle">
+        <img src="images/logo.svg" alt="Afrotopia Café Logo" class="logo-img">
+      </div>
+    </div>
+    <div class="menu-toggle" id="menu-toggle" aria-label="Open navigation" tabindex="0"><i class="fas fa-bars"></i></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <header class="hero-section" id="home">
+
+    <div class="hero-content animate-fade-in">
+      <h1>Experience Afro-fusion cuisine in the heart of art & culture.</h1>
+      <p>A unique blend of Zimbabwean flavors, art, and atmosphere at Theatre in the Park, Harare Gardens.</p>
+      <div class="buttons animate-slide-up">
+        <a href="#menu" class="btn btn-outline">View Menu</a>
+        <a href="bookings.html" class="btn btn-filled">Book a Table/Event</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="our-story" id="about">
+  <div class="story-container">
+    <div class="story-text animate-fade-left">
+      <h2>Our Story</h2>
+      <h3>Welcome to Afrotopia Café</h3>
+      <p>
+        Located at Theatre in the Park Harare Gardens in Harare, Afrotopia Café is more than just a restaurant – it’s a celebration of Zimbabwean art, culture, and cuisine.
+      </p>
+      <p>
+        Our café was born from a passion to create a space where visitors can immerse themselves in the rich cultural heritage of Zimbabwe while enjoying delicious, locally-inspired dishes prepared with care and creativity.
+      </p>
+      <p>
+        At Afrotopia, we believe that food is an art form. Our chefs craft each dish as a culinary masterpiece, combining traditional Zimbabwean flavors with modern cooking techniques to create an unforgettable dining experience.
+      </p>
+     
+    </div>
+
+    <div class="story-image animate-fade-right">
+      <div class="image-border">
+        <img src="images/story.jpg" alt="Afrotopis Interior">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="our-menu" id="menu">
+  <h2 class="animate-fade-in">Our Menu</h2>
+
+  <div class="menu-tabs animate-slide-up">
+    <button class="tab active" onclick="showMenu('breakfast')">Breakfast</button>
+    <button class="tab" onclick="showMenu('lunch')">Lunch</button>
+    <button class="tab" onclick="showMenu('beverages')">Beverages</button>
+  </div>
+
+  <!-- Breakfast -->
+  <div class="menu-items" data-category="breakfast">
+    <div class="menu-card animate-slide-up">
+      <img src="images/breakfast1.jpg" alt="Traditional Breakfast Platter">
+      <div class="menu-info">
+        <h3>Traditional Breakfast Platter </h3>
+        <p>A hearty breakfast with sadza, grilled sausage, baked beans, and fried eggs.</p>
+      </div>
+    </div>
+
+    <div class="menu-card animate-slide-up">
+      <img src="images/brekfast2.jpg" alt="Gallery Breakfast Bowl">
+      <div class="menu-info">
+        <h3>Gallery Breakfast Bowl </h3>
+        <p>Fresh seasonal fruits, yogurt, granola, and honey served with freshly baked pastries.</p>
+      </div>
+    </div>
+
+    <div class="menu-card animate-slide-up">
+      <img src="images/breakfast3.jpg" alt="Artist's Omelette">
+      <div class="menu-info">
+        <h3>Artist's Omelette </h3>
+        <p>Three-egg omelette with tomatoes, peppers, onions, and cheddar cheese served with toast.</p>
+      </div>
+    </div>
+
+    <div class="menu-card animate-slide-up">
+      <img src="images/breakfast4.jpg" alt="Artist's Omelette">
+      <div class="menu-info">
+      <h3>Artist's Omelette <span class="price">$9</span></h3>
+        <p>Three-egg omelette with tomatoes, peppers, onions, and cheddar cheese served with toast.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Lunch -->
+  <div class="menu-items" data-category="lunch" style="display: none;">
+    <div class="menu-card animate-slide-up">
+      <img src="images/lunch1.jpg" alt="Sadza and Beef Stew">
+      <div class="menu-info">
+        <h3>Sadza and Beef Stew </h3>
+        <p>Traditional sadza served with hearty beef stew and leafy greens.</p>
+      </div>
+    </div>
+
+     <div class="menu-card animate-slide-up">
+      <img src="images/lunch2.jpg" alt="Sadza and Beef Stew">
+      <div class="menu-info">
+        <h3>Sadza and Beef Stew </h3>
+        <p>Traditional sadza served with hearty beef stew and leafy greens.</p>
+      </div>
+    </div>
+
+     <div class="menu-card animate-slide-up">
+      <img src="images/lunch3.jpg" alt="Sadza and Beef Stew">
+      <div class="menu-info">
+        <h3>Sadza and Beef Stew </h3>
+        <p>Traditional sadza served with hearty beef stew and leafy greens.</p>
+      </div>
+    </div>
+
+     <div class="menu-card animate-slide-up">
+      <img src="images/lunch4.jpg" alt="Sadza and Beef Stew">
+      <div class="menu-info">
+        <h3>Sadza and Beef Stew</h3>
+        <p>Traditional sadza served with hearty beef stew and leafy greens.</p>
+      </div>
+    </div>
+
+     <div class="menu-card animate-slide-up">
+      <img src="images/lunch5.jpg" alt="Sadza and Beef Stew">
+      <div class="menu-info">
+        <h3>Sadza and Beef Stew  </h3>
+        <p>Traditional sadza served with hearty beef stew and leafy greens.</p>
+      </div>
+    </div>
+
+     <div class="menu-card animate-slide-up">
+      <img src="images/lunch6.jpg" alt="Sadza and Beef Stew">
+      <div class="menu-info">
+        <h3>Sadza and Beef Stew </h3>
+        <p>Traditional sadza served with hearty beef stew and leafy greens.</p>
+      </div>
+    </div>
+
+   
+  </div>
+
+  <!-- Beverages -->
+  <div class="menu-items" data-category="beverages" style="display: none;">
+    <div class="menu-card animate-slide-up">
+      <img src="images/beverages1.jpg" alt="Mazoe Orange Juice">
+      <div class="menu-info">
+        <h3>Mazoe Orange Juice </span></h3>
+        <p>Refreshing, sweet and tangy orange drink – a local favorite.</p>
+      </div>
+    </div>
+
+     <div class="menu-card animate-slide-up">
+      <img src="images/beverages2.jpg" alt="Mazoe Orange Juice">
+      <div class="menu-info">
+        <h3>Mazoe Orange Juice</h3>
+        <p>Refreshing, sweet and tangy orange drink – a local favorite.</p>
+      </div>
+    </div>
+
+     <div class="menu-card animate-slide-up">
+      <img src="images/beverages3.jpg" alt="Mazoe Orange Juice">
+      <div class="menu-info">
+        <h3>Mazoe Orange Juice </h3>
+        <p>Refreshing, sweet and tangy orange drink – a local favorite.</p>
+      </div>
+    </div>
+
+     <div class="menu-card animate-slide-up">
+      <img src="images/beverages4.jpg" alt="Mazoe Orange Juice">
+      <div class="menu-info">
+        <h3>Mazoe Orange Juice </h3>
+        <p>Refreshing, sweet and tangy orange drink – a local favorite.</p>
+      </div>
+    </div>
+
+     <div class="menu-card animate-slide-up">
+      <img src="images/beverages5.jpg" alt="Mazoe Orange Juice">
+      <div class="menu-info">
+        <h3>Mazoe Orange Juice </h3>
+        <p>Refreshing, sweet and tangy orange drink – a local favorite.</p>
+      </div>
+    </div>
+
+     <div class="menu-card animate-slide-up">
+      <img src="images/beverages6.jpg" alt="Mazoe Orange Juice">
+      <div class="menu-info">
+        <h3>Mazoe Orange Juice </h3>
+        <p>Refreshing, sweet and tangy orange drink – a local favorite.</p>
+      </div>
+    </div> 
+  </div>
+
+  <div class="menu-download animate-slide-up">
+    <a href="images/afrotopia menu.pdf" class="download-btn" download>Download Full Menu (PDF)</a>
+  </div>
+</section>
+
+
+<section class="gallery-section" id="gallery">
+    <h2 class="animate-fade-in">Our Gallery</h2>
+    <div class="underline animate-slide-up"></div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item animate-slide-up" onclick="openLightbox('images/img1.jpg')">
+        <img src="images/gallery1.jpg" alt="Gallery">
+        <div class="overlay"><span class="overlay-icon">🔍</span></div>
+      </div>
+      <div class="gallery-item animate-slide-up" onclick="openLightbox('images/img2.jpg')">
+        <img src="images/gallery2.jpg" alt="Gallery">
+        <div class="overlay"><span class="overlay-icon">🔍</span></div>
+      </div>
+      <div class="gallery-item animate-slide-up" onclick="openLightbox('images/img3.jpg')">
+        <img src="images/gallery3.jpg" alt="Gallery">
+        <div class="overlay"><span class="overlay-icon">🔍</span></div>
+      </div>
+      <div class="gallery-item animate-slide-up" onclick="openLightbox('images/img4.jpg')">
+        <img src="images/gallery4.jpg" alt="Gallery">
+        <div class="overlay"><span class="overlay-icon">🔍</span></div>
+      </div>
+      <div class="gallery-item animate-slide-up" onclick="openLightbox('images/img5.jpg')">
+        <img src="images/gallery5.jpg" alt="Gallery">
+        <div class="overlay"><span class="overlay-icon">🔍</span></div>
+      </div>
+      <div class="gallery-item animate-slide-up" onclick="openLightbox('images/img6.jpg')">
+        <img src="images/gallery6.jpg" alt="Gallery">
+        <div class="overlay"><span class="overlay-icon">🔍</span></div>
+      </div>
+       
+      <div class="gallery-item animate-slide-up" onclick="openLightbox('images/img1.jpg')">
+        <img src="images/gallery7.jpg" alt="Gallery">
+        <div class="overlay"><span class="overlay-icon">🔍</span></div>
+      </div>
+      <div class="gallery-item animate-slide-up" onclick="openLightbox('images/img2.jpg')">
+        <img src="images/gallery8.jpg" alt="Gallery">
+        <div class="overlay"><span class="overlay-icon">🔍</span></div>
+      </div>
+      <div class="gallery-item animate-slide-up" onclick="openLightbox('images/img3.jpg')">
+        <img src="images/gallery9.jpg" alt="Gallery">
+        <div class="overlay"><span class="overlay-icon">🔍</span></div>
+      </div>
+      <div class="gallery-item animate-slide-up" onclick="openLightbox('images/img4.jpg')">
+        <img src="images/gallery10.jpg" alt="Gallery">
+        <div class="overlay"><span class="overlay-icon">🔍</span></div>
+      </div>
+      <div class="gallery-item animate-slide-up" onclick="openLightbox('images/img5.jpg')">
+        <img src="images/gallery11.jpg" alt="Gallery">
+        <div class="overlay"><span class="overlay-icon">🔍</span></div>
+      </div>
+      <div class="gallery-item animate-slide-up" onclick="openLightbox('images/img6.jpg')">
+        <img src="images/gallery12.jpg" alt="Gallery">
+        <div class="overlay"><span class="overlay-icon">🔍</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Preview" />
+  </div>
+
+ 
+
+  <section class="events-section" id="events">
+  <h2 class="animate-fade-in">Events & Specials</h2>
+  <div class="underline animate-slide-up"></div>
+
+  <div class="event-cards">
+    <!-- Event 1 -->
+    <div class="event-card animate-slide-up">
+      <img src="images/jazz.jpg" alt="Jazz Night">
+      <div class="event-content">
+        <span class="event-tag">Every Friday</span>
+        <h3>Jazz Night</h3>
+        <p>Enjoy soulful jazz performances by local musicians while savoring our dinner specials.</p>
+        
+      </div>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="event-card animate-slide-up">
+      <img src="images/gallery8.jpg" alt="Poetry Evening">
+      <div class="event-content">
+        <span class="event-tag">Every Wednesday</span>
+        <h3>Winesday</h3>
+        <p>Get your glass of wine at just $1 a glass! No excuses, just wine</p>
+      </div>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="event-card animate-slide-up">
+      <img src="images/cock.jpg" alt="Cultural Tastings">
+      <div class="event-content">
+        <span class="event-tag">Every Sunday</span>
+        <h3>Weekend Tastings</h3>
+        <p>Saturdays are for vibes and even better cocktails-grab 3 for the price of 2 and let the fun flow!</p> 
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact-section" id="contact">
+  <h2 class="animate-fade-in">Contact Us</h2>
+  <div class="underline animate-slide-up"></div>
+
+  <div class="contact-container">
+    <!-- Contact Info -->
+    <div class="contact-info animate-fade-left">
+      <div class="info-item">
+        <h4>📍 Our Location</h4>
+        <p>Theatre in the Park,<br>
+        Harare Gardens,<br>
+        Harare, Zimbabwe</p>
+      </div>
+
+      <div class="info-item">
+        <h4>📞 Call Us</h4>
+        <p>+26378 915 6472</p>
+      </div>
+
+      <div class="info-item">
+        <h4>📧 Email Us</h4>
+        <p>hi@afrotopia.cafe</p>
+      </div>
+
+      <div class="info-item">
+        <h4>Opening Hours</h4>
+        <p>
+          Monday – Friday: 9:00 – 16:30 <br>
+          Saturday: 9:00 AM – 16:30<br>
+          Sunday: 10:00 AM – 16:30 
+        </p>
+      </div>
+
+      <!-- Map -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.321262788291!2d31.0454039!3d-17.823568599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a4e2ae8a23ef%3A0x9ce183fa7dec279d!2sTheatre%20In%20The%20Park!5e0!3m2!1sen!2szw!4v1751914609671!5m2!1sen!2szw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Reservation Form -->
+    <div class="contact-form animate-fade-right">
+      <form id="booking-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone" required>
+        <select name="type" required>
+          <option value="">Reservation Type</option>
+          <option value="Dinner Reservation">Dinner Reservation</option>
+          <option value="Lunch Reservation">Lunch Reservation</option>
+          <option value="Private Event">Private Event</option>
+          <option value="Other">Other</option>
+        </select>
+        <input type="date" name="date" required>
+        <input type="time" name="time" required>
+        <input type="number" name="guests" placeholder="Number of Guests" required>
+        <textarea name="message" rows="4" placeholder="Special Requests or Message"></textarea>
+        <button type="submit">Book A Table/Event</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h2 class="footer-title">Afrotopia Café</h2>
+        <p class="footer-desc">
+          A unique blend of Zimbabwean art, culture, and cuisine located in the heart of Harare at Theatre in the Park, Harare Gardens
+        </p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/afrotopiacafe" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/afrotopiacafe/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/263789156472" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Theatre in the Park, Harare Gardens, Harare</p>
+        <p><i class="fas fa-phone"></i> +26378 915 6472</p>
+        <p><i class="fas fa-envelope"></i> hi@afrotopia.cafe</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Afrotopia Café. All Rights Reserved.
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+<script>
+function to12Hour(time24) {
+  if (!time24) return '';
+  const [h, m] = time24.split(":");
+  let hour = parseInt(h);
+  const ampm = hour >= 12 ? 'PM' : 'AM';
+  hour = hour % 12;
+  if (hour === 0) hour = 12;
+  return `${hour}:${m} ${ampm}`;
+}
+document.getElementById('booking-form')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.name.value;
+  const email = form.email.value;
+  const phone = form.phone.value;
+  const type = form.type.value;
+  const date = form.date.value;
+  const time = to12Hour(form.time.value);
+  const guests = form.guests.value;
+  const message = form.message.value;
+  const waNumber = '263789156472';
+  const waMessage = `Booking Request:%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AType: ${type}%0ADate: ${date}%0ATime: ${time}%0AGuests: ${guests}%0ASpecial Requests: ${message}`;
+  const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
+  window.open(waUrl, '_blank');
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile nav toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('navLinks');
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      menuToggle.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.classList.remove('open');
+      });
+    });
+  }
+});
+</script>
+</body>
+</html>

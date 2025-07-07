@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Table | Afrotopia Café</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar solid-navbar">
+    <div class="logo"><img src="images/logo.svg" alt="Afrotopia Café Logo" style="height: 120px;"></div>
+    <div class="menu-toggle" id="menu-toggle" aria-label="Open navigation" tabindex="0">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="index.html#menu">Menu</a></li>
+      <li><a href="index.html#gallery">Gallery</a></li>
+      <li><a href="index.html#events">Events</a></li>
+      <li><a href="bookings.html">Book a Table</a></li>
+    </ul>
+  </nav>
+
+  <section class="contact-section" id="contact">
+    <h2>Book a Table/Event</h2>
+    <div class="underline"></div>
+    <div class="contact-container">
+      <div class="contact-form" style="margin:auto; float:none;">
+        <form id="booking-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <input type="tel" name="phone" placeholder="Your Phone" required>
+          <select name="type" required>
+            <option value="">Reservation Type</option>
+            <option value="Dinner Reservation">Dinner Reservation</option>
+            <option value="Lunch Reservation">Lunch Reservation</option>
+            <option value="Private Event">Private Event</option>
+            <option value="Other">Other</option>
+          </select>
+          <input type="date" name="date" required>
+          <select name="time" required>
+            <option value="">Select Time</option>
+            <option value="10:00 AM">10:00 AM</option>
+            <option value="11:00 AM">11:00 AM</option>
+            <option value="12:00 PM">12:00 PM</option>
+            <option value="1:00 PM">1:00 PM</option>
+            <option value="2:00 PM">2:00 PM</option>
+            <option value="3:00 PM">3:00 PM</option>
+            <option value="4:00 PM">4:00 PM</option>
+            <option value="5:00 PM">5:00 PM</option>
+            <option value="6:00 PM">6:00 PM</option>
+            <option value="7:00 PM">7:00 PM</option>
+            <option value="8:00 PM">8:00 PM</option>
+            <option value="9:00 PM">9:00 PM</option>
+          </select>
+          <input type="number" name="guests" placeholder="Number of Guests" required>
+          <textarea name="message" rows="4" placeholder="Special Requests or Message"></textarea>
+          <button type="submit">Book Table/Event</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</body>
+<script>
+document.getElementById('booking-form')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.name.value;
+  const email = form.email.value;
+  const phone = form.phone.value;
+  const type = form.type.value;
+  const date = form.date.value;
+  const time = form.time.value;
+  const guests = form.guests.value;
+  const message = form.message.value;
+  const waNumber = '263789156472';
+  const waMessage = `Booking Request:%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AType: ${type}%0ADate: ${date}%0ATime: ${time}%0AGuests: ${guests}%0ASpecial Requests: ${message}`;
+  const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
+  window.open(waUrl, '_blank');
+});
+
+// Mobile nav toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('navLinks');
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    menuToggle.classList.toggle('open');
+  });
+  // Optional: close menu when a link is clicked (for SPA feel)
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.classList.remove('open');
+    });
+  });
+}
+</script>
+</html> 
