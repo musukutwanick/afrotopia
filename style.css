@@ -46,7 +46,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  background: #800080;
+  background: #8d058d;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,7 +57,7 @@ html {
 }
 
 .solid-navbar {
-  background: #800080;
+  background: #a708a7;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
@@ -562,7 +562,22 @@ html {
 }
 
 .info-item {
-  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.info-item i {
+  color: #6a0dad;
+  font-size: 1.2rem;
+  width: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-content {
+  flex: 1;
 }
 
 .info-item h4 {
@@ -575,6 +590,7 @@ html {
 .info-item p {
   font-size: 0.95rem;
   color: #444;
+  line-height: 1.5;
 }
 
 .contact-form {
@@ -1200,34 +1216,44 @@ html {
   }
   .contact-container {
     flex-direction: column;
-    gap: 18px;
-    padding: 0 10px;
+    gap: 24px;
+    padding: 0 15px;
     align-items: stretch;
   }
   .contact-info {
     width: 100%;
     text-align: left;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
   .info-item {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 18px;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .info-item i {
+    color: #6a0dad;
+    font-size: 1.1rem;
+    width: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .info-content {
+    flex: 1;
   }
   .info-item h4 {
-    font-size: 1.1rem;
-    margin-bottom: 2px;
-    color: #800080;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #6a0dad;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 8px;
   }
   .info-item p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #444;
-    margin: 0;
+    line-height: 1.5;
+  }
+  .contact-form {
+    width: 100%;
   }
   .contact-form {
     width: 100%;
