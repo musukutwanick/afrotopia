@@ -404,33 +404,38 @@
 
   <script src="script.js"></script>
 <script>
-function to12Hour(time24) {
-  if (!time24) return '';
-  const [h, m] = time24.split(":");
-  let hour = parseInt(h);
-  const ampm = hour >= 12 ? 'PM' : 'AM';
-  hour = hour % 12;
-  if (hour === 0) hour = 12;
-  return `${hour}:${m} ${ampm}`;
-}
-document.getElementById('booking-form')?.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const name = form.name.value;
-  const email = form.email.value;
-  const phone = form.phone.value;
-  const type = form.type.value;
-  const date = form.date.value;
-  const time = to12Hour(form.time.value);
-  const guests = form.guests.value;
-  const message = form.message.value;
-  const waNumber = '263789156472';
-  const waMessage = `Booking Request:%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AType: ${type}%0ADate: ${date}%0ATime: ${time}%0AGuests: ${guests}%0ASpecial Requests: ${message}`;
-  const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
-  window.open(waUrl, '_blank');
-});
-
 document.addEventListener('DOMContentLoaded', function() {
+  // WhatsApp booking form functionality
+  function to12Hour(time24) {
+    if (!time24) return '';
+    const [h, m] = time24.split(":");
+    let hour = parseInt(h);
+    const ampm = hour >= 12 ? 'PM' : 'AM';
+    hour = hour % 12;
+    if (hour === 0) hour = 12;
+    return `${hour}:${m} ${ampm}`;
+  }
+
+  const bookingForm = document.getElementById('booking-form');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = form.name.value;
+      const email = form.email.value;
+      const phone = form.phone.value;
+      const type = form.type.value;
+      const date = form.date.value;
+      const time = to12Hour(form.time.value);
+      const guests = form.guests.value;
+      const message = form.message.value;
+      const waNumber = '263789156472';
+      const waMessage = `Booking Request:%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AType: ${type}%0ADate: ${date}%0ATime: ${time}%0AGuests: ${guests}%0ASpecial Requests: ${message}`;
+      const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
+      window.open(waUrl, '_blank');
+    });
+  }
+
   // Mobile nav toggle
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('navLinks');
@@ -445,8 +450,3 @@ document.addEventListener('DOMContentLoaded', function() {
         menuToggle.classList.remove('open');
       });
     });
-  }
-});
-</script>
-</body>
-</html>
