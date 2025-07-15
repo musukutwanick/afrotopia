@@ -23,10 +23,11 @@ document.querySelectorAll(".event-btn").forEach(btn => {
 });
 
 
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Your reservation request has been submitted.");
-});
+// This is handled by the inline script in index.html for WhatsApp integration
+// document.querySelector("form").addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   alert("Your reservation request has been submitted.");
+// });
 
 function showMenu(category) {
   const tabs = document.querySelectorAll('.tab');
