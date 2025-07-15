@@ -331,7 +331,7 @@
 
     <!-- Reservation Form -->
     <div class="contact-form animate-fade-right">
-      <form id="booking-form">
+      <form id="booking-form" onsubmit="return false;">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <input type="tel" name="phone" placeholder="Your Phone" required>
@@ -346,7 +346,7 @@
         <input type="time" name="time" required>
         <input type="number" name="guests" placeholder="Number of Guests" required>
         <textarea name="message" rows="4" placeholder="Special Requests or Message"></textarea>
-        <button type="submit">Book A Table/Event</button>
+        <button type="button" onclick="submitBookingForm()">Book A Table/Event</button>
       </form>
     </div>
   </div>
@@ -406,7 +406,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // WhatsApp booking form functionality
-  function to12Hour(time24) {
+  window.to12Hour = function(time24) {
     if (!time24) return '';
     const [h, m] = time24.split(":");
     let hour = parseInt(h);
@@ -414,39 +414,39 @@ document.addEventListener('DOMContentLoaded', function() {
     hour = hour % 12;
     if (hour === 0) hour = 12;
     return `${hour}:${m} ${ampm}`;
-  }
+  };
 
-  const bookingForm = document.getElementById('booking-form');
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const name = form.name.value;
-      const email = form.email.value;
-      const phone = form.phone.value;
-      const type = form.type.value;
-      const date = form.date.value;
-      const time = to12Hour(form.time.value);
-      const guests = form.guests.value;
-      const message = form.message.value;
-      const waNumber = '263789156472';
-      const waMessage = `Booking Request:%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AType: ${type}%0ADate: ${date}%0ATime: ${time}%0AGuests: ${guests}%0ASpecial Requests: ${message}`;
-      const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
-      window.open(waUrl, '_blank');
-    });
-  }
-
-  // Mobile nav toggle
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('navLinks');
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      menuToggle.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        menuToggle.classList.remove('open');
-      });
-    });
+  window.submitBookingForm = function() {
+    const form = document.getElementById('booking-form');
+    
+    // Validate required fields
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    
+    const name = form.name.value;
+    const email = form.email.value;
+    const phone = form.phone.value;
+    const type = form.type.value;
+    const date = form.date.value;
+    const time = window.to12Hour(form.time.value);
+    const guests = form.guests.value;
+    const message = form.message.value || 'No special requests';
+    
+    const waNumber = '263789156472';
+    const waMessage = encodeURIComponent(`Booking Request:
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Type: ${type}
+Date: ${date}
+Time: ${time}
+Guests: ${guests}
+Special Requests: ${message}`);
+    
+    const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
+    
+    // Open WhatsApp
+    window.open(waUrl, '_blank');
+    
