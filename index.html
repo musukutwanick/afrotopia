@@ -398,6 +398,7 @@
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 Afrotopia Café. All Rights Reserved.</p>
+      <p style="font-size: 0.8rem; color: #999; margin-top: 5px;">Designed by josh.com<br>+263786438897</p>
     </div>
   </footer>
 
@@ -450,3 +451,50 @@ Special Requests: ${message}`);
     // Open WhatsApp
     window.open(waUrl, '_blank');
     
+    // Reset form
+    form.reset();
+  };
+
+  // Backup event listener for form submission
+  const bookingForm = document.getElementById('booking-form');
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.submitBookingForm();
+      return false;
+    });
+  }
+
+  // Mobile nav toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('navLinks');
+  
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      navLinks.classList.toggle('open');
+      menuToggle.classList.toggle('open');
+    });
+    
+    // Close menu when clicking on a link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.classList.remove('open');
+      });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('open');
+        menuToggle.classList.remove('open');
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>
