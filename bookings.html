@@ -45,12 +45,11 @@
           <input type="tel" name="phone" placeholder="Your Phone" required>
           <select name="type" required>
             <option value="">Reservation Type</option>
-            <option value="Dinner Reservation">Dinner Reservation</option>
             <option value="Lunch Reservation">Lunch Reservation</option>
-            <option value="Private Event">Private Event</option>
+            <option value="Special Event">Special Event</option>
             <option value="Other">Other</option>
           </select>
-          <input type="date" name="date" required>
+          <input type="date" name="date" required placeholder="Select Date">
           <select name="time" required>
             <option value="">Select Time</option>
             <option value="10:00 AM">10:00 AM</option>
@@ -68,6 +67,10 @@
           </select>
           <input type="number" name="guests" placeholder="Number of Guests" required>
           <textarea name="message" rows="4" placeholder="Special Requests or Message"></textarea>
+          <div class="booking-policy" style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 5px; padding: 15px; margin: 15px 0; font-size: 0.9rem; color: #666;">
+            <p><strong>⚠️ Important:</strong> Reservations are held for 15 minutes only. If you are more than 15 minutes late, your reservation will expire.</p>
+            <p><strong>📞 Call for bookings:</strong> <a href="tel:+263789156472" style="color: #800080; text-decoration: none;">+263 789 156 472</a></p>
+          </div>
           <button type="submit">Book Table/Event</button>
         </form>
       </div>
