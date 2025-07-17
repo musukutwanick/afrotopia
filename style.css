@@ -18,7 +18,7 @@ html {
   position: relative;
   height: 100vh;
   background: linear-gradient(to right, rgba(97, 0, 146, 0.7), rgba(0, 146, 97, 0.6)), 
-              url('images/home.jpg') no-repeat center center/cover;
+              url('images/gallery01.jpg') no-repeat center center/cover;
   color: white;
   display: flex;
   flex-direction: column;
