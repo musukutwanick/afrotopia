@@ -46,7 +46,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  background: #8d058d;
+  background: #6a0f97;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,7 +57,7 @@ html {
 }
 
 .solid-navbar {
-  background: #a708a7;
+  background: #6a0f97;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
@@ -171,7 +171,7 @@ html {
   content: "";
   width: 60px;
   height: 4px;
-  background-color: #800080;
+  background-color: #6a0f97;
   display: block;
   margin: 8px auto 0;
   border-radius: 2px;
@@ -229,7 +229,7 @@ html {
   display: block;
   width: 60px;
   height: 4px;
-  background-color: #800080;
+  background-color: #6a0f97;
   margin: 8px auto 0;
   border-radius: 2px;
 }
@@ -253,7 +253,7 @@ html {
 }
 
 .tab.active {
-  color: #800080;
+  color: #6a0f97;
   font-weight: bold;
 }
 
@@ -264,7 +264,7 @@ html {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background: #800080;
+  background: #6a0f97;
 }
 
 .menu-items {
@@ -309,7 +309,7 @@ html {
 }
 
 .price {
-  color: green;
+  color: #05dbc6;
   font-size: 1rem;
 }
 
@@ -323,7 +323,7 @@ html {
 }
 
 .download-btn {
-  background-color: #006400;
+  background-color: #05dbc6;
   color: white;
   padding: 12px 24px;
   border-radius: 30px;
@@ -334,7 +334,7 @@ html {
 }
 
 .download-btn:hover {
-  background-color: #008000;
+  background-color: #04c4b0;
 }
 .gallery-section {
   text-align: center;
@@ -519,7 +519,7 @@ html {
 
 .event-btn {
   display: inline-block;
-  background-color: #6a0dad;
+  background-color: #6a0f97;
   color: white;
   padding: 10px 20px;
   border-radius: 999px;
@@ -530,7 +530,7 @@ html {
 }
 
 .event-btn:hover {
-  background-color: #5200a3;
+  background-color: #5a0d82;
 }
 
 .contact-section {
@@ -569,7 +569,7 @@ html {
 }
 
 .info-item i {
-  color: #6a0dad;
+  color: #6a0f97;
   font-size: 1.2rem;
   width: 20px;
   flex-shrink: 0;
@@ -583,7 +583,7 @@ html {
 .info-item h4 {
   font-weight: bold;
   font-size: 1rem;
-  color: #6a0dad;
+  color: #6a0f97;
   margin-bottom: 5px;
 }
 
@@ -615,7 +615,7 @@ html {
 }
 
 .contact-form button {
-  background-color: #6a0dad;
+  background-color: #6a0f97;
   color: white;
   border: none;
   padding: 12px;
@@ -626,7 +626,7 @@ html {
 }
 
 .contact-form button:hover {
-  background-color: #5200a3;
+  background-color: #5a0d82;
 }
 
 @media (max-width: 768px) {
@@ -688,7 +688,7 @@ html {
 
 
 .footer {
-  background-color: #3f0071;
+  background-color: #6a0f97;
   color: #fff;
   padding: 50px 20px 20px;
 }
@@ -801,7 +801,7 @@ html {
 
 .social-icons a {
   color: #fff;
-  background: #4e148c;
+  background: #5a0d82;
   width: 40px;
   height: 40px;
   display: flex;
@@ -814,7 +814,7 @@ html {
 
 .social-icons a:hover {
   background: #ffcb05;
-  color: #3f0071;
+  color: #6a0f97;
 }
 
 .footer-bottom {
@@ -883,7 +883,7 @@ html {
     position: absolute;
     top: 80px;
     right: 0;
-    background: #800080;
+    background: #6a0f97;
     flex-direction: column;
     width: 200px;
     align-items: flex-start;
@@ -918,7 +918,7 @@ html {
     width: 100vw;
     z-index: 100;
     padding: 0 12px;
-    background: #800080;
+    background: #6a0f97;
   }
   
   .logo img {
@@ -970,13 +970,13 @@ html {
     box-sizing: border-box;
   }
   .btn-outline {
-    background: #800080;
+    background: #6a0f97;
     color: #fff;
     border: 2px solid #fff;
   }
   .btn-outline:hover {
     background: #fff;
-    color: #800080;
+    color: #6a0f97;
   }
   .btn-filled {
     background: #ffd700;
@@ -985,7 +985,7 @@ html {
   }
   .btn-filled:hover {
     background: #fff;
-    color: #800080;
+    color: #6a0f97;
   }
 }
 
@@ -999,7 +999,7 @@ html {
 
 /* Default: solid navbar, white hamburger */
 .navbar {
-  background: #800080;
+  background: #6a0f97;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 .menu-toggle i {
@@ -1013,7 +1013,7 @@ html {
   border-bottom: 1px solid #eee;
 }
 .navbar.scrolled .menu-toggle i {
-  color: #800080 !important;
+  color: #6a0f97 !important;
 }
 .logo, .logo-text {
   background: none !important;
@@ -1239,7 +1239,7 @@ html {
     margin-bottom: 20px;
   }
   .info-item i {
-    color: #6a0dad;
+    color: #6a0f97;
     font-size: 1.1rem;
     width: 18px;
     flex-shrink: 0;
@@ -1251,7 +1251,7 @@ html {
   .info-item h4 {
     font-size: 1rem;
     margin-bottom: 5px;
-    color: #6a0dad;
+    color: #6a0f97;
     font-weight: bold;
   }
   .info-item p {
